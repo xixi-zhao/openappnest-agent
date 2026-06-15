@@ -5,7 +5,7 @@ Node agent for [OpenAppNest](https://github.com/xixi-zhao/openappnest) — runs 
 ## Quick Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/xixi-zhao/openappnest/main/scripts/install-agent.sh | bash -s -- --token <YOUR_TOKEN>
+curl -fsSL https://raw.githubusercontent.com/xixi-zhao/openappnest-agent/main/install-agent.sh | bash -s -- --token <YOUR_TOKEN> --endpoint <MASTER_URL>
 ```
 
 ## Binaries
@@ -38,8 +38,9 @@ All behind `Authorization: Bearer <token>`:
 |----------|---------|-------------|
 | AGENT_PORT | 9100 | HTTP listen port |
 | AGENT_TOKEN | (required) | Bearer token for API auth |
+| AGENT_ENDPOINT | (optional) | Master server URL for heartbeat |
 | APPS_DIR | /srv/apps | Instance data directory |
-| CADDY_FILE | /etc/caddy/Caddyfile | Caddy config for reverse proxy |
+| CADDY_FILE | /etc/caddy/Caddyfile.apps | Caddy config for reverse proxy |
 
 ## Docs
 
